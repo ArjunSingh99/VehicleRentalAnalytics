@@ -15,6 +15,9 @@ This project analyzes vehicle rental bookings and generates reports on revenue, 
   - `matplotlib`
   - `folium`
 
+- Make sure your API provides booking data at `/api/v1/bookings`.
+- API implementation: [vehicle-rental-management](https://github.com/ArjunSingh99/vehicle-rental-management)
+
 ## Configuration
 
 - Set your API base URL and SSL verification in `credentials.ini`:
@@ -59,8 +62,8 @@ This project analyzes vehicle rental bookings and generates reports on revenue, 
 - `report_generator.py` - Generates reports (JSON, CSV, plots).
 - `vehicle_tracking.py` - Handles vehicle tracking map generation.
 - `requirements.txt` - Python dependencies.
+- `credentials.ini` - API configuration.
 
 ## Notes
 
-- Make sure your API provides booking data at `/api/v1/bookings`.
-- For a compatible API implementation, see: [vehicle-rental-management](https://github.com/ArjunSingh99/vehicle-rental-management)
+- Ensure your API server is running and accessible at the configured `BASE_URL`.
