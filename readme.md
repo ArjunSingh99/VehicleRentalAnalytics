@@ -13,6 +13,7 @@ This project analyzes vehicle rental bookings and generates reports on revenue, 
 
   - `requests`
   - `matplotlib`
+  - `folium`
 
 ## Configuration
 
