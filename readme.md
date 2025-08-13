@@ -36,19 +36,27 @@ This project analyzes vehicle rental bookings and generates reports on revenue, 
    ```
    python main.py
    ```
+4. Run vehicle tracking for a specific booking:
+   ```
+   python vehicle_tracking_main.py <booking_id>
+   ```
+   Replace `<booking_id>` with the actual booking ID you want to visualize.
 
 ## Output
 
 - **analytics.json**: Summary of analytics in JSON format.
 - **analytics.csv**: CSV report with metrics and car model counts.
 - **car_popularity_metrics.png**: Bar chart showing car model popularity.
+- **vehicle_tracking_map.html**: Interactive map showing vehicle locations (opened automatically in your browser).
 
 ## Project Structure
 
 - `main.py` - Entry point for running analytics.
+- `vehicle_tracking_main.py` - Entry point for vehicle tracking visualization.
 - `api_client.py` - Handles API requests.
 - `analytics.py` - Performs data analysis.
 - `report_generator.py` - Generates reports (JSON, CSV, plots).
+- `vehicle_tracking.py` - Handles vehicle tracking map generation.
 - `requirements.txt` - Python dependencies.
 
 ## Notes
