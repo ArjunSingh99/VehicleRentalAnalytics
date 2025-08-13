@@ -16,12 +16,14 @@ This project analyzes vehicle rental bookings and generates reports on revenue, 
 
 ## Configuration
 
-- The API base URL is set in `main.py`:
+- Set your API base URL and SSL verification in `credentials.ini`:
   ```
-  BASE_URL = 'http://localhost:5047'
+  [API]
+  BASE_URL = http://localhost:5047
+  VERIFY_SSL = False
   ```
-  Change this if your API is hosted elsewhere.
-- SSL verification is disabled by default (`VERIFY_SSL = False`). Set to `True` if your API uses a valid SSL certificate.
+  Change `BASE_URL` if your API is hosted elsewhere.
+  Set `VERIFY_SSL` to `True` if your API uses a valid SSL certificate.
 
 ## How to Run
 

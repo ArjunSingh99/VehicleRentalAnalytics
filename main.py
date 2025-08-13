@@ -1,14 +1,16 @@
+import configparser
 from api_client import ApiClient
 from analytics import Analytics
 from report_generator import Reporter
 
-BASE_URL = 'http://localhost:5047'
-VERIFY_SSL = False
-
 def main():
-    print('start')
-    client = ApiClient(BASE_URL, VERIFY_SSL)
+    print('Started Analysis')
+    config = configparser.ConfigParser()
+    config.read('credentials.ini')
+    base_url = config.get('API', 'BASE_URL', fallback='http://localhost:5047')
+    verify_ssl = config.getboolean('API', 'VERIFY_SSL', fallback=False)
 
+    client = ApiClient(base_url, verify_ssl)
     bookings = client.get_bookings()
 
     analytics = Analytics(bookings)
