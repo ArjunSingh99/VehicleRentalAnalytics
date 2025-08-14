@@ -6,9 +6,10 @@ from vehicle_tracking import Tracking
 def main():
     print('Started Vehicle Tracking')
     if len(sys.argv) < 2:
-        print("Usage: python vehicle_tracking_main.py <booking_id>")
+        print("Usage: python vehicle_tracking_main.py <booking_id> [--track]")
         sys.exit(1)
     booking_id = sys.argv[1]
+    show_track = '--track' in sys.argv
 
     config = configparser.ConfigParser()
     config.read('credentials.ini')
@@ -18,7 +19,7 @@ def main():
     client = ApiClient(base_url, verify_ssl)
     vehicle_data = client.get_location_history(base_url, booking_id, verify_ssl)
     tracking = Tracking(vehicle_data, map_centre=(50, -80))
-    tracking.plot_vehicle_locations()
+    tracking.plot_vehicle_locations(show_track=show_track)
 
     print('Vehicle tracking completed')
 
