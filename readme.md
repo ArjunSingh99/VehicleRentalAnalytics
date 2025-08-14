@@ -42,9 +42,10 @@ This project analyzes vehicle rental bookings and generates reports on revenue, 
    ```
 4. Run vehicle tracking for a specific booking:
    ```
-   python vehicle_tracking_main.py <booking_id>
+   python vehicle_tracking_main.py <booking_id> [--track]
    ```
    Replace `<booking_id>` with the actual booking ID you want to visualize.
+   Add `--track` to also display the route taken by the vehicle as a polyline.
 
 ## Output
 
